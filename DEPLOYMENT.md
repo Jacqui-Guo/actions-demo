@@ -2,12 +2,34 @@
 
 ## 步骤 1: 启用 GitHub Pages
 
+### 方法 A: 使用 GitHub Actions（推荐）
+
 1. 进入您的 GitHub 仓库
 2. 点击 **Settings** 标签页
 3. 在左侧菜单中找到 **Pages**
-4. 在 **Source** 部分选择 **Deploy from a branch**
-5. 选择 **gh-pages** 分支
-6. 选择 **/ (root)** 文件夹
+4. 在 **Source** 部分选择 **"GitHub Actions"**
+5. 点击 **Save**
+
+### 方法 B: 使用 gh-pages 分支
+
+**注意**: 如果 gh-pages 分支不存在，请先运行以下命令创建：
+```bash
+git checkout --orphan gh-pages
+git rm -rf .
+echo "# GitHub Pages" > index.html
+git add index.html
+git commit -m "Initial commit for gh-pages"
+git push origin gh-pages
+git checkout main
+```
+
+然后：
+1. 进入您的 GitHub 仓库
+2. 点击 **Settings** 标签页
+3. 在左侧菜单中找到 **Pages**
+4. 在 **Source** 部分选择 **"Deploy from a branch"**
+5. 选择 **"gh-pages"** 分支
+6. 选择 **"/ (root)"** 文件夹
 7. 点击 **Save**
 
 ## 步骤 2: 设置仓库权限
