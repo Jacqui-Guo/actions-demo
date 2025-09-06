@@ -97,7 +97,6 @@ export default function Docs() {
                 <div className="font-mono text-sm space-y-1">
                   <div className="text-blue-400">export default function Page()</div>
                   <div className="text-gray-300">  return &lt;div&gt;Hello World&lt;/div&gt;</div>
-                  <div className="text-gray-300">}</div>
                 </div>
               </div>
               <div className="bg-black/20 rounded-lg p-4">
@@ -105,7 +104,6 @@ export default function Docs() {
                 <div className="font-mono text-sm space-y-1">
                   <div className="text-blue-400">export async function GET()</div>
                   <div className="text-gray-300">  return Response.json(data)</div>
-                  <div className="text-gray-300">}</div>
                 </div>
               </div>
             </div>
