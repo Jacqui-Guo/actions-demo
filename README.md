@@ -87,33 +87,17 @@ actions-demo/
 
 ## 部署
 
-### GitHub Pages (已配置)
+### GitHub Pages ✅ 已成功部署
 
-项目已配置自动部署到 GitHub Pages：
+**🌐 网站地址**: https://jacqui-guo.github.io/actions-demo
 
-**重要**: 首次部署需要手动启用 GitHub Pages：
+项目已成功部署到 GitHub Pages，使用自动化的 GitHub Actions 工作流。
 
-1. **启用 GitHub Pages**：
-   - 进入仓库的 Settings → Pages
-   - Source 选择 "Deploy from a branch"
-   - Branch 选择 "gh-pages"
-   - Folder 选择 "/ (root)"
-   - 点击 Save
-
-2. **设置权限**：
-   - Settings → Actions → General
-   - Workflow permissions 选择 "Read and write permissions"
-
-3. **推送代码**：
-   ```bash
-   git add .
-   git commit -m "Deploy to GitHub Pages"
-   git push origin main
-   ```
-
-4. **查看部署**：
-   - 在 Actions 标签页查看部署进度
-   - 访问 `https://yourusername.github.io/actions-demo`
+#### 部署特性：
+- ✅ 自动构建和部署
+- ✅ GitHub Actions 工作流
+- ✅ 静态站点生成
+- ✅ 自定义域名支持
 
 **详细配置指南**: 查看 [DEPLOYMENT.md](./DEPLOYMENT.md)
 
