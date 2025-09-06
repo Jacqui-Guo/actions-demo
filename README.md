@@ -87,11 +87,30 @@ actions-demo/
 
 ## 部署
 
+### GitHub Pages (已配置)
+
+项目已配置自动部署到 GitHub Pages：
+
+1. 将代码推送到 `main` 分支
+2. GitHub Actions 会自动构建并部署
+3. 访问 `https://yourusername.github.io/actions-demo` 查看部署结果
+
+**注意**: 需要在 GitHub 仓库设置中启用 GitHub Pages：
+- 进入仓库的 Settings → Pages
+- Source 选择 "GitHub Actions"
+
 ### Vercel (推荐)
 
 1. 将代码推送到 GitHub
 2. 在 [Vercel](https://vercel.com) 上导入项目
 3. 自动部署完成
+
+### 本地构建
+
+```bash
+npm run build
+# 构建输出在 ./out 目录
+```
 
 ### 其他平台
 
