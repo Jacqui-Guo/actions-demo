@@ -91,13 +91,31 @@ actions-demo/
 
 项目已配置自动部署到 GitHub Pages：
 
-1. 将代码推送到 `main` 分支
-2. GitHub Actions 会自动构建并部署
-3. 访问 `https://yourusername.github.io/actions-demo` 查看部署结果
+**重要**: 首次部署需要手动启用 GitHub Pages：
 
-**注意**: 需要在 GitHub 仓库设置中启用 GitHub Pages：
-- 进入仓库的 Settings → Pages
-- Source 选择 "GitHub Actions"
+1. **启用 GitHub Pages**：
+   - 进入仓库的 Settings → Pages
+   - Source 选择 "Deploy from a branch"
+   - Branch 选择 "gh-pages"
+   - Folder 选择 "/ (root)"
+   - 点击 Save
+
+2. **设置权限**：
+   - Settings → Actions → General
+   - Workflow permissions 选择 "Read and write permissions"
+
+3. **推送代码**：
+   ```bash
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
+   ```
+
+4. **查看部署**：
+   - 在 Actions 标签页查看部署进度
+   - 访问 `https://yourusername.github.io/actions-demo`
+
+**详细配置指南**: 查看 [DEPLOYMENT.md](./DEPLOYMENT.md)
 
 ### Vercel (推荐)
 
