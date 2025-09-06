@@ -1,14 +1,15 @@
 on: push
 
 jobs:
-  release-to-qa1:
+  release-to-qa:
     name: Release to QA1
     runs-on: ubuntu-latest
     steps:
-      run: pwd
-      run: ls
-  release-to-qa2:
-    name: Release to QA2
-    runs-on: windows-latest
-    steps:
-      run: node --version
+      name: 读取仓库内容
+      uses: actions/checkout@v4
+
+      name: 安装依赖
+      uses: npm install
+
+      name: 打包
+      uses: npm run build
