@@ -1,1 +1,14 @@
 on: push
+
+jobs:
+  release-to-qa1:
+    name: Release to QA1
+    runs-on: ubuntu-latest
+    steps:
+      run: pwd
+      run: ls
+  release-to-qa2:
+    name: Release to QA2
+    runs-on: windows-latest
+    steps:
+      run: node --version
