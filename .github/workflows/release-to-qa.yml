@@ -1,6 +1,9 @@
 name: Release to QA
 on: push
 
+permissions:
+  contents: write
+
 jobs:
   release-to-qa:
     name: Release to QA1
@@ -14,3 +17,9 @@ jobs:
       run: | 
         npm install
         npm run build
+
+    - name: 部署
+      uses: JamesIves/github-pages-deploy-action@v4
+      with: 
+        branch: dist-pages
+        folder: build
