@@ -1,15 +1,16 @@
+name: Release to QA
 on: push
 
 jobs:
   release-to-qa:
     name: Release to QA1
     runs-on: ubuntu-latest
+
     steps:
-      name: 读取仓库内容
-      uses: actions/checkout@v4
+      - name: 读取仓库内容
+      - uses: actions/checkout@v4
 
-      name: 安装依赖
-      uses: npm install
-
-      name: 打包
-      uses: npm run build
+      - name: 安装依赖 & 打包
+        run: | 
+          npm install
+          npm run build
